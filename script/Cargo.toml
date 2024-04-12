@@ -1,0 +1,18 @@
+[workspace]
+[package]
+version = "0.1.0"
+name = "test-sp1-script"
+edition = "2021"
+
+[dependencies]
+sha2 = "=0.11.0-pre.1"
+sp1-sdk = { git = "https://github.com/succinctlabs/sp1.git" }
+ark-bn254 = "0.3.0"
+ark-ec = "0.3.0"
+ark-ff = "0.3.0"
+ark-poly = "0.3.0"
+num-bigint = "0.4.4"
+tiny-keccak = { version = "2.0", features = ["sha3","keccak"] }
+
+[build-dependencies]
+sp1-helper = { git = "https://github.com/succinctlabs/sp1.git" }
