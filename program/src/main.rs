@@ -586,9 +586,14 @@ pub fn main() {
         b = sum;
     }
 
+    println!("Inside main");
+
     // let 
+    println!("cycle-tracker-start: loading");
     let proof = get_proof();
     let pub_signal = get_pubSignals();
+    println!("cycle-tracker-end: loading");
+    println!("cycle-tracker-start: verification");
 
     let mut challenges = Challenges {
         alpha: Fr::zero(),
@@ -786,6 +791,7 @@ pub fn main() {
     else {
         println!("Proof verification failed!");
     }
+    println!("cycle-tracker-end: verification");
     sp1_zkvm::io::commit(&n);
     sp1_zkvm::io::commit(&a);
     sp1_zkvm::io::commit(&b);
