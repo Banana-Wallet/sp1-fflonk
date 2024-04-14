@@ -1083,7 +1083,7 @@ fn computeFEJ(
 
 
 
-pub fn run_main(){
+pub fn run_main_fflonk(){
      // let 
      let proof = get_proof();
      let pub_signal = get_pubSignals();
