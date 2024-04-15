@@ -17,7 +17,7 @@ fn main() {
     let expected_b: u32 = 2448710421u32;
 
     let mut stdin = SP1Stdin::new();
-    stdin.write(&n);
+    // stdin.write(&n);
 
     // Generate the proof for the given program and input.
     let client = ProverClient::new();
