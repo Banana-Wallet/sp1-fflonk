@@ -906,144 +906,144 @@ fn prepare_aggregated_commitment(
         )
     }
 
-    update_agg_challenge = update_aggregation_challenge_second(
-        proof_state_polys_3,
-        proof_state_polys_3_opening_at_z_omega_slot,
-        first_d_coeff,
-        aggregation_challenge,
-        aggregated_opening_z_omega,
-        state_v_slot,
-        state_u,
-        aggregated_z_omega,
-    );
+    // update_agg_challenge = update_aggregation_challenge_second(
+    //     proof_state_polys_3,
+    //     proof_state_polys_3_opening_at_z_omega_slot,
+    //     first_d_coeff,
+    //     aggregation_challenge,
+    //     aggregated_opening_z_omega,
+    //     state_v_slot,
+    //     state_u,
+    //     aggregated_z_omega,
+    // );
 
-    aggregated_z_omega = update_agg_challenge.1;
-    aggregation_challenge = update_agg_challenge.0;
-    aggregated_opening_z_omega = update_agg_challenge.2;
+    // aggregated_z_omega = update_agg_challenge.1;
+    // aggregation_challenge = update_agg_challenge.0;
+    // aggregated_opening_z_omega = update_agg_challenge.2;
 
-    println!(
-        "Aggregated at z omega 1 {:?}",
-        aggregated_z_omega.x.to_string()
-    );
-    println!(
-        "Aggregation Challenge 1 {:?}",
-        aggregation_challenge.to_string()
-    );
+    // println!(
+    //     "Aggregated at z omega 1 {:?}",
+    //     aggregated_z_omega.x.to_string()
+    // );
+    // println!(
+    //     "Aggregation Challenge 1 {:?}",
+    //     aggregation_challenge.to_string()
+    // );
 
-    let proof_lookup_s_poly = proof.lookup_s_poly;
+    // let proof_lookup_s_poly = proof.lookup_s_poly;
 
-    let proof_lookup_s_poly_opening_at_z_omega = proof.lookup_s_poly_opening_at_z_omega;
+    // let proof_lookup_s_poly_opening_at_z_omega = proof.lookup_s_poly_opening_at_z_omega;
 
-    let proof_lookup_grand_product_affine = proof.lookup_grand_product;
+    // let proof_lookup_grand_product_affine = proof.lookup_grand_product;
 
-    update_agg_challenge = update_aggregation_challenge_second(
-        proof_lookup_s_poly,
-        proof_lookup_s_poly_opening_at_z_omega,
-        lookup_s_first_aggregated_commitment_coeff,
-        aggregation_challenge,
-        aggregated_opening_z_omega,
-        state_v_slot,
-        state_u,
-        aggregated_z_omega,
-    );
+    // update_agg_challenge = update_aggregation_challenge_second(
+    //     proof_lookup_s_poly,
+    //     proof_lookup_s_poly_opening_at_z_omega,
+    //     lookup_s_first_aggregated_commitment_coeff,
+    //     aggregation_challenge,
+    //     aggregated_opening_z_omega,
+    //     state_v_slot,
+    //     state_u,
+    //     aggregated_z_omega,
+    // );
 
-    aggregated_z_omega = update_agg_challenge.1;
-    aggregation_challenge = update_agg_challenge.0;
-    aggregated_opening_z_omega = update_agg_challenge.2;
+    // aggregated_z_omega = update_agg_challenge.1;
+    // aggregation_challenge = update_agg_challenge.0;
+    // aggregated_opening_z_omega = update_agg_challenge.2;
 
-    println!(
-        "Aggregated at z omega 2 {:?}",
-        aggregated_z_omega.x.to_string()
-    );
-    println!(
-        "Aggregation Challenge 2 {:?}",
-        aggregation_challenge.to_string()
-    );
+    // println!(
+    //     "Aggregated at z omega 2 {:?}",
+    //     aggregated_z_omega.x.to_string()
+    // );
+    // println!(
+    //     "Aggregation Challenge 2 {:?}",
+    //     aggregation_challenge.to_string()
+    // );
 
-    let proof_lookup_grand_product_opening_at_z_omega = proof.lookup_grand_product_opening_at_z_omega;
+    // let proof_lookup_grand_product_opening_at_z_omega = proof.lookup_grand_product_opening_at_z_omega;
 
-    let proof_lookup_t_poly_opening_at_z_omega = proof.lookup_t_poly_opening_at_z_omega;
+    // let proof_lookup_t_poly_opening_at_z_omega = proof.lookup_t_poly_opening_at_z_omega;
 
-    update_agg_challenge = update_aggregation_challenge_second(
-        proof_lookup_grand_product_affine,
-        proof_lookup_grand_product_opening_at_z_omega,
-        lookup_grand_product_first_aggregated_commitment_coeff,
-        aggregation_challenge,
-        aggregated_opening_z_omega,
-        state_v_slot,
-        state_u,
-        aggregated_z_omega,
-    );
+    // update_agg_challenge = update_aggregation_challenge_second(
+    //     proof_lookup_grand_product_affine,
+    //     proof_lookup_grand_product_opening_at_z_omega,
+    //     lookup_grand_product_first_aggregated_commitment_coeff,
+    //     aggregation_challenge,
+    //     aggregated_opening_z_omega,
+    //     state_v_slot,
+    //     state_u,
+    //     aggregated_z_omega,
+    // );
 
-    aggregated_z_omega = update_agg_challenge.1;
-    aggregation_challenge = update_agg_challenge.0;
-    aggregated_opening_z_omega = update_agg_challenge.2;
+    // aggregated_z_omega = update_agg_challenge.1;
+    // aggregation_challenge = update_agg_challenge.0;
+    // aggregated_opening_z_omega = update_agg_challenge.2;
 
-    println!(
-        "kdfghfgh {:?}",
-        lookup_grand_product_first_aggregated_commitment_coeff.to_string()
-    );
+    // println!(
+    //     "kdfghfgh {:?}",
+    //     lookup_grand_product_first_aggregated_commitment_coeff.to_string()
+    // );
 
-    println!(
-        "Aggregated at z omega 3 {:?}",
-        aggregated_z_omega.x.to_string()
-    );
-    println!(
-        "Aggregation Challenge 3 {:?}",
-        aggregation_challenge.to_string()
-    );
+    // println!(
+    //     "Aggregated at z omega 3 {:?}",
+    //     aggregated_z_omega.x.to_string()
+    // );
+    // println!(
+    //     "Aggregation Challenge 3 {:?}",
+    //     aggregation_challenge.to_string()
+    // );
 
-    update_agg_challenge = update_aggregation_challenge_second(
-        queries_t_poly_aggregated,
-        proof_lookup_t_poly_opening_at_z_omega,
-        first_t_coeff,
-        aggregation_challenge,
-        aggregated_opening_z_omega,
-        state_v_slot,
-        state_u,
-        aggregated_z_omega,
-    );
+    // update_agg_challenge = update_aggregation_challenge_second(
+    //     queries_t_poly_aggregated,
+    //     proof_lookup_t_poly_opening_at_z_omega,
+    //     first_t_coeff,
+    //     aggregation_challenge,
+    //     aggregated_opening_z_omega,
+    //     state_v_slot,
+    //     state_u,
+    //     aggregated_z_omega,
+    // );
 
-    aggregated_z_omega = update_agg_challenge.1;
-    aggregation_challenge = update_agg_challenge.0;
-    aggregated_opening_z_omega = update_agg_challenge.2;
+    // aggregated_z_omega = update_agg_challenge.1;
+    // aggregation_challenge = update_agg_challenge.0;
+    // aggregated_opening_z_omega = update_agg_challenge.2;
 
-    println!(
-        "Aggregated at z omega 4 {:?}",
-        aggregated_z_omega.x.to_string()
-    );
-    println!(
-        "Aggregation Challenge 4 {:?}",
-        aggregation_challenge.to_string()
-    );
+    // println!(
+    //     "Aggregated at z omega 4 {:?}",
+    //     aggregated_z_omega.x.to_string()
+    // );
+    // println!(
+    //     "Aggregation Challenge 4 {:?}",
+    //     aggregation_challenge.to_string()
+    // );
 
-    // store aggregated_opening_z_omega somewhere and return it as it might be used somewhere else
+    // // store aggregated_opening_z_omega somewhere and return it as it might be used somewhere else
 
-    println!(
-        "Aggregated at z x Slot: {:?}",
-        aggregated_at_z.x.to_string()
-    );
+    // println!(
+    //     "Aggregated at z x Slot: {:?}",
+    //     aggregated_at_z.x.to_string()
+    // );
 
-    println!(
-        "Aggregated Z Omega x Slot: {:?}",
-        aggregated_z_omega.x.to_string()
-    );
+    // println!(
+    //     "Aggregated Z Omega x Slot: {:?}",
+    //     aggregated_z_omega.x.to_string()
+    // );
 
-    let pairing_pair_with_generator = aggregated_at_z.add(aggregated_z_omega);
+    // let pairing_pair_with_generator = aggregated_at_z.add(aggregated_z_omega);
 
-    println!(
-        "Pairing Pair with Generator x Slot: {:?}",
-        pairing_pair_with_generator.x.to_string()
-    );
+    // println!(
+    //     "Pairing Pair with Generator x Slot: {:?}",
+    //     pairing_pair_with_generator.x.to_string()
+    // );
 
-    let aggregated_value = aggregated_opening_z_omega
-        .mul(state_u)
-        .add(aggregated_opening_at_z);
+    // let aggregated_value = aggregated_opening_z_omega
+    //     .mul(state_u)
+    //     .add(aggregated_opening_at_z);
 
-    println!(
-        "Aggregated Value x Slot: {:?}",
-        aggregated_value.to_string()
-    );
+    // println!(
+    //     "Aggregated Value x Slot: {:?}",
+    //     aggregated_value.to_string()
+    // );
 
     // mstore(PAIRING_BUFFER_POINT_X_SLOT, 1)
     //             mstore(PAIRING_BUFFER_POINT_Y_SLOT, 2)
