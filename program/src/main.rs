@@ -10,10 +10,19 @@ mod zksync;
 mod zksync_utils;
 pub use crate::zksync::verify;
 
+#[sp1_derive::cycle_tracker]
+pub fn zk_sync_verify() {
+    verify();
+
+}
+
+
 pub fn main() {
     // NOTE: values of n larger than 186 will overflow the u128 type,
     // resulting in output that doesn't match fibonacci sequence.
     // However, the resulting proof will still be valid!
+    println!("cycle-tracker-start: setup");
+
     let n = sp1_zkvm::io::read::<u32>();
     let mut a: u32 = 0;
     let mut b: u32 = 1;
@@ -23,9 +32,14 @@ pub fn main() {
         a = b;
         b = sum;
     }
+    println!("cycle-tracker-end: setup");
+
+    println!("cycle-tracker-start: main-body");
+    verify();
+
+    println!("cycle-tracker-end: main-body");
 
     // run_main_fflonk();
-    verify();
 
 
    

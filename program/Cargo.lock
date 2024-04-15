@@ -617,9 +617,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "sp1-derive"
+version = "0.1.0"
+source = "git+https://github.com/succinctlabs/sp1.git#12c841b29f596b3949d446ea923ee60efa0350f5"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 1.0.109",
+]
+
+[[package]]
 name = "sp1-precompiles"
 version = "0.1.0"
-source = "git+https://github.com/succinctlabs/sp1.git#713d2cdf57f91ac73ed0e765f4bb279ab6abb08f"
+source = "git+https://github.com/succinctlabs/sp1.git#12c841b29f596b3949d446ea923ee60efa0350f5"
 dependencies = [
  "anyhow",
  "bincode",
@@ -633,7 +643,7 @@ dependencies = [
 [[package]]
 name = "sp1-zkvm"
 version = "0.1.0"
-source = "git+https://github.com/succinctlabs/sp1.git#713d2cdf57f91ac73ed0e765f4bb279ab6abb08f"
+source = "git+https://github.com/succinctlabs/sp1.git#12c841b29f596b3949d446ea923ee60efa0350f5"
 dependencies = [
  "bincode",
  "cfg-if",
@@ -700,6 +710,7 @@ dependencies = [
  "ark-ff",
  "ark-poly",
  "num-bigint",
+ "sp1-derive",
  "sp1-zkvm",
  "tiny-keccak",
 ]
